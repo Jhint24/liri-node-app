@@ -11,24 +11,33 @@ var command = process.argv[2];
 
 //Twitter
 var client  = new Twitter(keys.twitter);
-
-function getTweets()    {
+//Twitter Function
+function getTweets()    
+{
     var params = {screen_name: 'CodigyProphet', count: 20};
-client.get('statuses/user_timeline', params, function(error, tweets, response) {
-  if (!error) {
-    console.log("no");
+client.get('statuses/user_timeline', params, function(error, tweets, response) 
+{
+  if (!error) 
+  {
+      for (var i = 0; i < tweets.length; i++)   {
+              console.log(tweets[i].text);
+              console.log(tweets[i].created_at);
   }
-
-  else {
-      console.log(tweets.text)
+}
+  else 
+  {
+      console.log(error)
   }
 });
 }
 
-if (command === "my-tweets") {
-    getTweets();
-}
 
-else{
-    console.log("Please input a correct command");
-}
+
+if (command === "my-tweets") {
+     getTweets();
+ }
+
+ else{
+     console.log("Please input a correct command");
+ }
+getTweets();
