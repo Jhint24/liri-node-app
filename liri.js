@@ -1,6 +1,7 @@
 require("dotenv").config();
 var twitterSomethingLikeThat = require("./functions/twitter")
 var spotifySomethingLikeThat = require("./functions/spotify")
+var whatSomethingLikeThat = require("./functions/whatitsays")
 var keys = require("./keys");
 //var spotify = new Spotify(keys.spotify);
 //var client = new Twitter(keys.twitter);
@@ -10,7 +11,7 @@ var keys = require("./keys");
 //var spotify = require('spotify');
 var command = process.argv[2];
 var command2 = process.argv[3];
-var song = "";
+var song = "";//searchstring update
 for (var i = 3; i < process.argv.length; i++)   {
     //console.log(process.argv[i]);
     song += process.argv[i] + " ";
@@ -25,6 +26,10 @@ if (command === "my-tweets") {
 else if (command === "spotify-this-song")   {
     spotifySomethingLikeThat.getSpotify(song);
 } 
+else if (command === "do-what-it-says") {
+    whatSomethingLikeThat.whatItSays();
+    
+}
 
  else{
      console.log("Please input a correct command");
