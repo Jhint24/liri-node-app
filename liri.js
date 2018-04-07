@@ -15,6 +15,9 @@ if (command === "my-tweets") {
      twitterSomethingLikeThat.getTweets();
  }
 
+else if (command === "spotify-this-song")   {
+    
+} 
  else{
      console.log("Please input a correct command");
  }
