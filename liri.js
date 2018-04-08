@@ -29,4 +29,4 @@ else if (command === "do-what-it-says") {
  else{
      console.log("Please input a correct command");
  }
-console.log(song);
+//console.log(song);
