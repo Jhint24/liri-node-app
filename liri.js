@@ -3,12 +3,7 @@ var twitterSomethingLikeThat = require("./functions/twitter")
 var spotifySomethingLikeThat = require("./functions/spotify")
 var whatSomethingLikeThat = require("./functions/whatitsays")
 var keys = require("./keys");
-//var spotify = new Spotify(keys.spotify);
-//var client = new Twitter(keys.twitter);
-//var inquirer = require('inquirer');
-//var omdb = require('omdb');
-//codigyprophet
-//var spotify = require('spotify');
+
 var command = process.argv[2];
 var command2 = process.argv[3];
 var song = "";//searchstring update

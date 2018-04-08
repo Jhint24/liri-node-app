@@ -9,7 +9,7 @@ function getSpotify(song)   {
           return console.log('Error occurred: ' + err);
         }
        
-      console.log(data.tracks); 
+      console.log(data.tracks); //update what you are logging please
       });
 
 }
