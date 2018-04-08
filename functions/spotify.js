@@ -8,8 +8,19 @@ function getSpotify(song)   {
         if (err) {
           return console.log('Error occurred: ' + err);
         }
-       
-      console.log(data.tracks); //update what you are logging please
+       else if (data.tracks.items.length < 1) {
+         console.log("No Song Name Match Found")
+
+       }
+
+       else{
+        console.log("Artist: " + data.tracks.items[0].album.artists[0].name);
+        console.log("Song: " + data.tracks.items[0].name);
+        console.log("Link: " + data.tracks.items[0].album.external_urls.spotify);
+        console.log("Album: " + data.tracks.items[0].album.name);
+       //update what you are logging please
+       }
+
       });
 
 }
